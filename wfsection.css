@@ -1,0 +1,304 @@
+<style type="text/css">
+<!--
+.style1 {
+	text-align: left;
+	margin-left: 5px;
+	font-size: 90%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	line-height: 120%;
+	}
+.author {
+	text-align: left;
+	margin-left: 5px;
+	font-size: 80%;
+	line-height: 120%;
+	}
+.sectionheading {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	text-transform: capitalize;
+	font-size: 150%;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 5px;
+	vertical-align: text-bottom;
+}
+.listarts {
+	text-align: right;
+	padding-top: 2px;
+	margin-right: 5px;
+	font-size: 90%;
+}
+.style4 {
+	background-color: #D4D0C8;
+}
+.articletitle {
+	font-weight: bold;
+	line-height: normal;
+	text-align: left;
+	vertical-align: text-bottom;
+}
+.sectiontitle {
+	font-weight: bold;
+	line-height: normal;
+	text-align: left;
+	padding-bottom: 2px;
+	padding-left: 5px;
+}
+.style6 {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-size: 110%;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 5px;
+}
+
+.title {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-size: 110%;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 5px;
+	margin-bottom: 1px;
+}
+.date {
+	text-align: left;
+	margin-left: 5px;
+	line-height: 120%;
+	font-size: 80%;
+	padding-left: 2px;
+	}
+.summary {
+	text-align: left;
+	margin-left: 1px;
+	font-size: 100%;
+	padding-bottom: 2px;
+	padding-top: 5px;
+	padding-left: 5px;	
+}
+.style1 {
+	text-align: left;
+	margin-left: 5px;
+	font-size: 80%;
+	padding: 1px;
+	}
+.summary {
+	text-align: left;
+	margin-left: 1px;
+	font-size: 100%;
+	padding-bottom: 2px;
+	padding-top: 5px;
+	padding-left: 5px;	
+}	
+.sectionheading {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-size: 140%;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 5px;
+	vertical-align: text-bottom;
+}
+.style3 {
+	text-align: right;
+	font-size: 80%;
+}
+.style4 {
+	background-color: #000000;
+}
+.style5 {
+	padding: 2px;
+	font-weight: bold;
+	font-size: 110%; 
+}
+.style6 {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-size: 130%;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 5px;
+}
+.date {
+	text-align: left;
+	margin-left: 5px;
+	font-size: 70%;
+	padding: 2px;
+	}
+.articletitle {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-weight: bold;
+	font-size: 140%;
+	line-height: 110%;
+	text-align: left;
+	vertical-align: text-bottom;
+}
+
+.sectiontitle {
+	font-weight: bold;
+	font-size: 120%;
+	line-height: normal;
+	text-align: left;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	padding-top: 2px;
+} 
+.style1 {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-size: 130%; 
+	font-weight: bold;
+	text-align: left;
+	padding-left: 3px;
+	margin-left: 3px;
+}
+.style2 {
+	text-align: left;
+	padding-left: 3px;
+	padding-top: 2px;
+	font-size: 80%;
+	}
+.style3 {
+	text-align: right;
+	margin-right: 3px;
+	padding-right: 3px;
+	padding-top: 2px;
+	font-size: 80%;
+}
+.style5 {
+	font-weight: bold;
+	font-size: 110%; 
+}
+.style1 {
+	text-align: left;
+	margin-left: 5px;
+	font-size: 80%;
+	padding: 1px;
+	}
+.summary {
+	text-align: left;
+	margin-left: 1px;
+	font-size: 100%;
+	padding-bottom: 2px;
+	padding-top: 5px;
+	padding-left: 5px;	
+}	
+.sectionheading {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-size: 140%;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 5px;
+	vertical-align: text-bottom;
+}
+.style3 {
+	text-align: right;
+	font-size: 80%;
+}
+.style4 {
+	background-color: #000000;
+}
+.style5 {
+	padding: 2px;
+	font-weight: bold;
+	font-size: 110%; 
+}
+.style6 {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-size: 130%;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 5px;
+}
+.date {
+	text-align: left;
+	margin-left: 5px;
+	font-size: 70%;
+	padding: 2px;
+	}
+.articletitle {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-weight: bold;
+	font-size: 140%;
+	line-height: 110%;
+	text-align: left;
+	vertical-align: text-bottom;
+}
+
+.sectiontitle {
+	font-weight: bold;
+	font-size: 120%;
+	line-height: normal;
+	text-align: left;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	padding-top: 2px;
+}
+.style1 {
+	text-align: left;
+	margin-left: 5px;
+	font-size: 90%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	line-height: 120%;
+	}
+.author {
+	text-align: left;
+	margin-left: 5px;
+	font-size: 80%;
+	line-height: 120%;
+	}
+.sectionheading {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	text-transform: capitalize;
+	font-size: 150%;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 5px;
+	vertical-align: text-bottom;
+}
+.listarts {
+	text-align: right;
+	padding-top: 2px;
+	margin-right: 5px;
+	font-size: 90%;
+}
+.style4 {
+	background-color: #D4D0C8;
+}
+.articletitle {
+	font-weight: bold;
+	line-height: normal;
+	text-align: left;
+	vertical-align: text-bottom;
+}
+.sectiontitle {
+	font-weight: bold;
+	line-height: normal;
+	text-align: left;
+	padding-bottom: 2px;
+	padding-left: 5px;
+}
+.style6 {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-size: 110%;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 5px;
+}
+
+.title {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-size: 110%;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 5px;
+	margin-bottom: 1px;
+}
+.date {
+	text-align: left;
+	margin-left: 5px;
+	line-height: 120%;
+	font-size: 80%;
+	padding-left: 2px;
+	}
+  
+-->
+</style>

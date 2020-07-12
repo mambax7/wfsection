@@ -1,0 +1,48 @@
+	<{if $reviews.display == 1}>
+      <div style="float: right; width: 30%; "> 
+        <div width: 30%; style="margin-left: 5px; margin-right: 5px; padding: 4px; background-color:#E6E6E6; border-color:#999999;" class = "outer"> 
+          <div align="left"><small><b><{$lang_publisher}></b>&nbsp;<{$reviews.publisher}></small></div> 
+          <div align="left"><small><b><{$lang_developer}></b>&nbsp;<{$reviews.developer}></small></div> 
+          <div align="left"><small><b><{$lang_website}></b><br /><{$reviews.website}></small></div> 
+          <div align="left"><small><b><{$lang_platform}></b>&nbsp;<{$reviews.platform}></small></div> 
+          <div align="left"><small><b><{$lang_released}></b>&nbsp;<{$reviews.released}></small></div> 
+        </div> 
+        <br /> 
+        <div style="margin-left: 5px; margin-right: 5px; margin-top: 5px;padding: 4px; background-color:#E6E6E6; border-color:#999999;" class = "outer"> 
+          <div align="left"><small><b><{$lang_difficult}></b>&nbsp;<{$reviews.difficulty}></small></div> 
+          <div align="left"><small><b><{$lang_genre}></b>&nbsp;<{$reviews.genre}></small></div> 
+          <div align="left"><small><b><{$lang_players}></b>&nbsp;<{$reviews.players}></small></div> 
+          <div align="left"><small><b><{$lang_playonline}></b>&nbsp;<{$reviews.playonline}></small></div> 
+          <div align="left"><small><b><{$lang_esrb}></b>&nbsp;<{$reviews.family}></small></div> 
+          <div align="left"><small><b><{$lang_learningcurve}></b>&nbsp;<{$reviews.curve}></small></div> 
+        </div> 
+        <br /> 
+        <div style="margin-left: 5px; margin-right: 5px; margin-top: 5px;padding: 4px; background-color:#E6E6E6; border-color:#999999;" class = "outer"> 
+          <div align="left"><b><{$lang_overall}></b>&nbsp;<b><font size="4"><{$reviews.overall}>/50</font></b></div> 
+          <br /> 
+          <div align="left"> 
+            <div align="right"><b><{$lang_gameplay}></b>&nbsp;<img src="images/icon/<{$reviews.gameplay}>" alt="" align="absmiddle"></div> 
+          </div> 
+          <div align="left"> 
+            <div align="right"><b><{$lang_publisher}></b>&nbsp;<img src="images/icon/<{$reviews.graphics}>" alt="" align="absmiddle"></div> 
+          </div> 
+          <div align="left"> 
+            <div align="right"><b><{$lang_sound}></b>&nbsp;<img src="images/icon/<{$reviews.sound}>" alt="" align="absmiddle"></div> 
+          </div> 
+          <div align="left"> 
+            <div align="right"><b><{$lang_concept}></b>&nbsp;<img src="images/icon/<{$reviews.concept}>" alt="" align="absmiddle"></div> 
+          </div> 
+          <div align="left"> 
+            <div align="right"><b><{$lang_value}></b>&nbsp;<img src="images/icon/<{$reviews.value}>" alt="" align="absmiddle"></div> 
+          </div> 
+          <div align="left"> 
+            <div align="right"><b><{$lang_tilt}></b>&nbsp;<img src="images/icon/<{$reviews.tilt}>" alt="" align="absmiddle"></div> 
+          </div> 
+        </div>
+		<br />	 
+	<{/if}> 	
+	<{if $reviews.display == 1}> 
+		<span><b><{$lang_conclusion}></b> 
+		<{$reviews.conclusion}></span>
+		<br/> 
+	<{/if}>

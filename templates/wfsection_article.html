@@ -1,0 +1,179 @@
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <{if $article.userimg }>
+		<td width="71" rowspan="3" align="center" valign="middle"><{$article.userimg}></td>
+	<{/if}>
+    <td width="91%" class="style1"><{$article.titlemain}> <{$article.adminlink}></td>
+  </tr>
+  <tr>
+    <td bgcolor="#000000"><img src="/images/blank.png" alt="" height="1" width="1" border="0"></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top" width="75%" class="style2">
+			<{if $article.username != ""}><div><b><{$lang_author}></b> <{$article.username}> 
+				<{if $article.email != ""}> <{$article.email}></div><{/if}>
+			<{/if}>
+            <{if $article.datetime != ""}><div><b><{$lang_published}></b> <{$article.datetime}></div><{/if}> 
+			<{if $article.version != ""}><div><b><{$lang_version}></b> <{$article.version}></div><{/if}>
+			<{if $article.id != ""}><div><b><{$lang_articleid}></b> <{$article.id}></div><{/if}>
+		</td>
+        <td width="25%" align="right" valign="top" class="style3">
+			 <{if $novote == true}>
+			 <{if $article.rating != ""}><div><b><{$lang_rating}></b> <{$article.rating}></div><{/if}> 
+             <{if $article.votes != ""}><div><b><{$lang_votes}></b> <{$article.votes}></div><{/if}>
+			<{/if}> 
+			 <{if $article.counter != ""}><div><b><{$lang_views}></b> <{$article.counter}><{$lang_times}></div><{/if}>
+			 <{if $article.size != ""}><div><b><{$lang_size}></b> <{$article.size}></div><{/if}>
+		</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<{if $pdfpage}>
+<iframe src="<{$pdfpage}>" width="100%" style="height: 30em">
+[Your browser does <em>not</em> support <code>iframe</code>,
+or has been configured not to display inline frames.
+You can access <a target="_blank" href="<{$pdfpage}>">the document</a>
+via a link though.]</iframe>
+<{/if}>
+<br />
+<div align="right" style="padding: 5px;">
+ <{if $article.isforumid > 0}>
+  <a href='<{$xoops_url}><{$article.forum_path}>'><img src='images/forum.gif' alt='<{$lang_inforum}>' /></a>
+ <{/if}>  
+ <a href='print.php?articleid=<{$article.articleid}>'><img src='images/print.gif' alt='<{$lang_printer}>' /></a> 
+ <a target='_top' href='mailto:?subject="<{$lang_subjectsitename}>"&body="<{$lang_subjectfound}>: <{$xoops_url}>/modules/wfsection/article.php?articleid=<{$article.articleid}>"'><img src='images/friend.gif' alt='<{$lang_tellafriend}>' /></a> 
+</div>
+<br />   
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td width="100%" align="left" valign="top"> 
+	<{if $article.image}> 
+      <img src="<{$article.image}>" align="right" hspace= "5" vspace= "0"  alt="" style="border: 1px solid black"> 
+	<{/if}> 
+	
+	<{if $article.subtitle != ""}> 
+		<div class = "style5"><{$article.subtitle}></div><br /> 
+	<{/if}>
+	<{if $article.is_include == 1}> 
+	  	<{include_php file="file:$my_template"}>
+	<{else}>	
+		<{$article.maintext}> 
+	<{/if}>	
+	</td> 
+  </tr> 
+</table> 
+<br />
+<div align = "left">
+	<{foreach item=morelinks from=$article.morelinks}>
+		<li><{$morelinks.articlelink}>
+    <{/foreach}>
+</div><br />
+
+<{if $pagenav !=''}> 
+<div align = "right"><b><{$lang_page}>:</b>&nbsp;<{$pagenav}></div><br /> 
+<{/if}>
+
+<{if $showfiles == true}> 
+<div class='itemHead' align='left'> <b><{$lang_downloadsfor}> <{$article.title}></b> </div> 
+<div><{$article.downloadlink}></div><br /> 
+<{/if}> 
+
+<table width = "100%" cellspacing = "1" cellpadding = "2">
+<tr>
+
+<{if $relatednum }> 
+<td width = "50%">
+<div align = 'left'><b><{$lang_relatedart}>:</b></div> 
+<{foreach item=related from=$related_article}> 
+    <li><div style="padding-left: 3px;"><{$related.title}></div> 
+    <{if $related.summary}>
+		<div style="padding-left: 20px;"><{$related.summary}></div> 
+	<{/if}>
+<{/foreach}>
+</td>
+<{/if}> 
+
+<{if $relatednewsnum }> 
+<td width = "50%">
+<div align = 'left'><b><{$lang_relatednews}>:</b></div> 
+<{foreach item=relatednews from=$related_newsstory}> 
+    <li><div style="padding-left: 3px;"><{$relatednews.title}></div> 
+    <{if $relatednews.summary}>
+		<div style="padding-left: 20px;"><{$relatednews.summary}></div> 
+	<{/if}>
+<{/foreach}> 
+</td>
+<{/if}> 
+</tr>
+</table>
+
+<{if $relatedlink }> 
+<div align = 'left'><b><{$lang_relatedlinks}>:</b></div> 
+<{foreach item=relatedlinks from=$related_link}> 
+    <li><div style="padding-left: 3px;"><{$relatedlinks.linktitle}></div> 
+<{/foreach}> 
+<{/if}> 
+
+<!-- Start link loop -->
+<{section name=i loop=$downloads}>
+   <{include file="db:wfsection_downloads.html" down=$downloads[i]}><br />
+<{/section}>
+
+<!-- End link loop -->
+
+<{if $novote == true}>
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="2"> 
+  <tr> 
+    <td valign="middle" align="center"> <form method="POST" action="ratefile.php"> 
+        <small>
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"> 
+          <tr> 
+            <td align="center" width="20%" ></td> 
+            <td align="center" class = "item" bgcolor="#E6E6E6">1
+              <input type="radio" name="rating" value="1" checked></td> 
+            <td align="center" class = "item" bgcolor="#E6E6E6">2
+              <input type="radio" name="rating" value="2"></td> 
+            <td align="center" class = "item" bgcolor="#E6E6E6">3
+              <input type="radio" name="rating" value="3"></td> 
+            <td align="center" class = "item" bgcolor="#E6E6E6">4
+              <input type="radio" name="rating" value="4"></td> 
+            <td align="center" class = "item" bgcolor="#E6E6E6">5
+              <input type="radio" name="rating" value="5"></td> 
+            <td align="center" class = "item" bgcolor="#E6E6E6">6
+              <input type="radio" name="rating" value="6"></td> 
+            <td align="center" class = "item" bgcolor="#E6E6E6">7
+              <input type="radio" name="rating" value="7"></td> 
+            <td align="center" class = "item" bgcolor="#E6E6E6">8
+              <input type="radio" name="rating" value="8"></td> 
+            <td align="center" class = "item" bgcolor="#E6E6E6">9
+              <input type="radio" name="rating" value="9"></td> 
+            <td align="center" class = "item" bgcolor="#E6E6E6">10
+              <input type="radio" name="rating" value="10"></td> 
+            <td align="center">
+        		<input type="hidden" name="lid" value="<{$article.articleid}>"> 
+            	<input type="submit" name="submit" value="<{$smarty.const._WFS_RATEIT}>">
+			</td> 
+          </tr> 
+        </table> 
+		</small>
+      </form></td> 
+  </tr> 
+</table> 
+<{/if}> 
+<small><div valign="middle" align="center">[ <a href='./viewarticles.php?category=<{$article.categoryid}>'><{$lang_backtocategory}></a><b> | </b><a href='./index.php'><{$lang_backtoindex}></a> ]</div></small>
+
+<div style="text-align: center; padding: 3px;margin:3px;"> <{$commentsnav}> <{$lang_notice}> </div> 
+<div style="margin:3px; padding: 3px;"> 
+  <!-- start comments loop --> 
+<{if $comment_mode == "flat"}> <{include file="db:system_comments_flat.html"}> <{elseif $comment_mode == "thread"}> <{include file="db:system_comments_thread.html"}> <{elseif $comment_mode == "nest"}> <{include file="db:system_comments_nest.html"}> <{/if}> 
+  <!-- end comments loop --> 
+</div> 
+<div align = "right"> 
+  <div><a href='article.php?articleid=<{$article.articleid}>#top'><img src="images/navpagefunctions_top_over.gif"></a></div> 
+  <div align="center"><{$lang_copyright}></div> 
+</div> 

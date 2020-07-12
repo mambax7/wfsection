@@ -1,0 +1,73 @@
+Bug fix list history:
+10 April 2007 - Version 2.9.1 Beta1
+Fixed:
+- Fixed php5 compatiability Issues throughout WF-Sections
+- Fixed issues regarding unsanitized vars
+- Plus some other minor issues
+
+23 September 2004 - Version 2.0.7 beta1
+
+fixed:
+- lots of blank page issues fixed when GD Library is not installed on the webserver
+- permission system rewritten
+- fixed security issue of accessing articles directly by their ID
+- Path configuration dialog: removed "Attached Files Upload Temp Path: This path is no longer required and will be removed."
+- WF-Sections tries to create thumbnail folders if they don´t exist now
+- file upload issues fixed with using mimetype system from wf-downloads now
+- Server stats information section added for easier troubleshooting
+- several irritating text string appearances remove when 'Database succesfully updated' is displayed
+- fixed some issues with import of word files  (note: this requires com extension enabled in your php). Still some issues left but should work better now.
+- Xoops Admin Area:  Fixed context menu for the wf-sections button
+- regrouped layout of wf-sections admin area. (Upper bar general options, lower bars content related functions)
+- fixed URL issues in several files and templates with using $xoops_url instead of $xoopsurl
+- fixed a bug listing all articles listed when selecting a non existent category
+- fixed a bug were documents when changed where not listed as submitted and the changes were not stored despite the message saying 'DB updated succesfully'
+- did a massive clean out in language defines. Removed lots of unused defines
+- changed many variable, function and define names to prevent problems when running wf-sections side by side with several other modules (e.g. X-IPB, newbb2 ...)
+- admin section: renamed 'HTML Import' button to 'Import document' as it can import html / php / txt and word files
+- server error 500 fixed. This was caused by eating up lots of memory on screens retrieving a userlist with xoops function because it retrieved all user data not only the names so we rewrote this function
+- prevent authors email adress from being displayed if he has set it not to be displayed to others in his user profile
+- using shortened 'Section title' in blocks now to prevent messing up of the screen layout
+- document properties: added support for different forums for linking
+- removed file manager from wf-sections
+- corrected path for the avator image in the author block so it gets displayed now
+- fixed a blankscreen issue after submitting a new article
+- fixed sections not being listed in the main menu area even when setup for it
+- updated block management with GIJOES new version
+- fixed problems with "read Full Article" and "list All Article" links
+- added page management function to allow easy creation and modification of WF-Sections pages (e.g. adding removing WF-Sections logos)
+- changed column type for the article text from "text" to "mediumtext" in the database it can use max. 16mb instead of 64kb for the text.
+- fixed issues with wrong IDs when duplication sections with subsections
+- .....
+
+
+
+July 2004 Version 2.02
+
+fixed:
+1 image/thumb management
+2 spotlight block
+3 other block display: author, topten
+4 file uploader/management
+5 article restore
+6 edit checkin/checkout
+7 section copy
+8 auto summary
+
+improved:
+spaw editor languages
+spaw editor toolbar, as well as table width
+
+TODO
+WF lib re-write from background
+A.for next minor version
+1 use core groupperm
+2 import html
+3 import MSword
+4 add summary to forum [the forum module should be configurable, such as newbb, ipb]
+B for next major version
+1 pdf on fly
+2 creating static html documents
+3 features requested
+
+NOTE: this version is more like a bug-fix version, as well as feature reduction version since "html import" does not work well right now.

@@ -1,0 +1,31 @@
+<{if $catarray.imageheader != ""}>
+	<br /><div align = 'center'><{$catarray.imageheader}></div><br />
+<{/if}>
+
+<{if $brokenreport == true}>
+ <div align='center'>
+  <h4><{$lang_alreadyreported}></h4>
+   <div><{$lang_thanksforreporting}></div><br />
+   <div><b><{$lang_filetitle}></b><{$broken.title}></div>
+   <div><b><{$lang_sourceid}></b><{$broken.id}></div>
+   <div><b><{$lang_reporter}></b> <{$broken.reporter}></div>
+   <div><b><{$lang_datereported}></b> <{$broken.date}></div><br />
+   <div><b><{$lang_webmasterack}></b> <{$broken.acknowledged}></div>
+   <div><b><{$lang_webmastercon}></b> <{$broken.confirmed}></div>
+ </div>
+<{else}>
+ <div align='center'>
+  <h4><{$lang_reportbroken}></h4>
+  <div><{$lang_thanksforhelp}></div>
+  <div><{$lang_forsecurity}></div><br />
+
+  <div><{$lang_beforesubmit}></div><br />
+  <div><b><{$lang_filesource}></b><{$down.homepage}></div><br />
+  <div><b><{$lang_filetitle}></b><{$down.title}></div>
+  <div><b><{$lang_publisher}>:</b> <{$down.publisher}></div>
+  <div><b><{$lang_subdate}>:</b> <{$down.updated}></div>
+  <form action="brokenfile.php" method="POST">
+    <input type="hidden" name="lid" value="<{$file_id}>" /><input type="submit" name="submit" value="<{$lang_submitbroken}>" />&nbsp;<input type=button value="<{$lang_cancel}>" onclick="javascript:history.go(-1)" />
+  </form>
+ </div>
+<{/if}>

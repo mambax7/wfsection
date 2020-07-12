@@ -1,0 +1,136 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+ <tr>
+  <td align="right">
+   <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr align="left">
+	 <td class="sectionheading"><{$artarray.headingtitle}></td>
+	  <{if $artarray.sectionimage}>
+	   <td width="89" height="89" rowspan="4" align="right"><{$artarray.sectionimage}></td>
+	  <{/if}>
+	 </tr>
+	<tr>
+	  <td valign="bottom" bgcolor="#000000"><img src="images/spacer.gif" alt="" width="100%" height="1" border="0"></td>
+		</tr>
+	<tr>
+	  <td valign="bottom" bgcolor="#B8B8B8"><img src="images/spacer.gif" alt="" width="100%" height="1" border="0"></td>
+		</tr>
+	<tr >
+	  <td height="20" align="right" valign="top"><img src="images/spacer.gif" alt="" height="22" border="0"></td>
+		</tr>
+	<tr >
+	  <td align="right" valign="top"><img src="images/spacer.gif" alt="" height="15" border="0"></td>
+	</tr>
+   </table>
+  </td>
+ </tr>
+</table>
+<br />
+<{if $artarray.catdescription}>
+<div align= 'left'><{$artarray.catdescription}></div>
+<br />
+<{/if}>
+<{ if $artarray.pulldown }>
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b><{$lang_selectsection}></b></td>
+  </tr>
+  <tr>
+    <td><{$artarray.pulldown}></td>
+  </tr>
+</table>
+<br />
+<{/if}>
+<!-- Start Feature -->
+<{$sorry}>
+<{if $feature}>
+
+<{foreach item=feature from=$feature}>
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <{if $feature.image !=''}> 
+	 <td valign="top"><img src="<{$feature.image}>" alt="" hspace="0" vspace="0" border="0" align="top" style="border: solid 1px black"></td>
+    <{/if}>
+	<td width="100%" valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="84%" class="sectiontitle"><{$feature.title}></td>
+      </tr>
+      <tr>
+        <td class="style4"><img src="images/spacer.gif" alt="" height="2" border="0"></td>
+      </tr>
+      <tr>
+        <td valign="top" class="summary"><{$feature.summary}></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<div align="right"><img src="images/icon/arrow_redW.gif" alt="" width="16" height="16" border="0" align="absmiddle"> <small><{$feature.more}></small></div>
+<br />
+<{/foreach}>
+
+<br />
+<{/if}>
+<!-- End Feature -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+ <tr>
+  <td class="articletitle"><{$lang_otherarticles}></td>
+ </tr>
+ <tr>
+ <td class="style4"><img src="<{$xoops_imageurl}>/images/spacer.gif" alt="" height="2" width="10" align="absmiddle" border="0"></td>
+ </tr>
+</table>
+<br />
+	<div align='left'><{$artarray.showartamount}></div>
+<br />
+<{if $artarray.pagenav }>
+<div style="text-align: right;"><b><{$lang_pages}></b>: <{$artarray.pagenav}></div><br />
+<{/if}>
+<br />
+<{if $artarray.sortmenu != ""}>
+ <table border='0' cellspacing='0' cellpadding ='0' width = 100%>
+  <tr>
+   <td><div align='center'><{$artarray.sortmenu}></div></td>
+  </tr>
+ </table>
+<{/if}>
+<{foreach item=article from=$articles}>
+<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
+ <tr>
+  <td colspan="2" class = "articletitle"><b><{$feature.cat}></b></td>
+ </tr>
+ <tr>
+  <{if $article.image !=''}> 
+   <td valign="top"><img src="<{$article.image}>" alt="" width="60" height="60" hspace="2" vspace="2" border="0" style="border: solid 1px black"></td>
+  <{/if}> 
+  <td width="100%" valign="top">
+   <div><span class = "style6"><{$article.title}> <{$article.icons}></span> <span><{$article.adminlink}></span></div>
+   <div class = "style4"><img src="/images/blank.png" alt="" height="1" width="10" border="0"></div>
+   <div align="right" style="padding-top: 2px; "><small>
+    <span>
+	 <{if $article.username != ""}><b><{$lang_author}></b> <{$article.username}><{/if}>
+	 <{if $article.published != ""}><b><{$lang_published}></b> <{$article.published}><{/if}>
+	 <{if $article.counter != ""}>(<b><{$lang_hits}></b> <{$article.counter}>)<{/if}>
+   	</span></small>
+   </div>
+   <div align="left" style="text-align: justify; margin-top: 5px; margin-bottom: 5px; margin-right: 5px; margin-left: 5px;"><{$article.summary}></div>
+   <div class = "style3">
+   <{if $wfs_novote == true}>
+    	<{if $article.votes != ""}><b><{$lang_votes}></b> <{$article.votes}><{/if}>
+		<{if $article.rating != ""}><b><{$lang_rated}></b> <{$article.rating}><{/if}>
+   <{/if}>
+   <{if $article.filescount != ""}><b><{$lang_files}></b> <{$article.filescount}><{/if}>
+   <{if $article.commentcount != ""}><b><{$lang_comments}></b> <{$article.commentcount}><{/if}></div>
+	
+  </td>
+ </tr>
+</table>
+<div align="right" style="padding-top: 2px;"><img src="images/icon/arrow_blueW.gif" alt="" width="16" height="16" border="0" align="absmiddle"> <small><{$article.readmore}></small></div>
+<br />
+<{/foreach}>
+
+<{if $artarray.pagenav }>
+<div style="text-align: right;"><b><{$lang_pages}></b>: <{$artarray.pagenav}></div><br />
+<{/if}>
+<{if $artarray.footer }>
+<div style="text-align: <{$catarray.indexfooteralign}>; "><{$artarray.footer}></div><br />
+<{/if}>
+<div align='center'><{$artarray.menu}></div>

@@ -1,0 +1,31 @@
+<div style="text-align: left;"><{$block.header}></div>
+<table border="0" cellpadding="5" cellspacing="0" width="100%" >
+  <tr align="left"> 
+    <td><b><{$block.articletitle}></b>
+    </td>
+  </tr>
+  <tr align="left"> 
+    <{if $block.author }>
+	<td> 
+      <b><{$block.lang_by}></b> <{$block.author}>
+    </td>
+	<{/if}>
+  <tr align="left"> 
+    <td> 
+      <div>&nbsp;</div>
+    </td>
+  </tr>
+  <tr> 
+     <td>
+		<{if $block.image != ""}> 
+			<span style="float:left; background-color: transparent;"> 
+      		<img src="<{$block.image}>" align="left" hspace= "5" vspace= "0"  alt="" style="border: 1px solid black"> 
+			</span> 
+		<{/if}>
+    <{$block.maintext}></td>
+  </tr>
+  <tr>
+    <td align="right"><{$block.readmore}></td>
+  </tr>
+<!-- table end -->
+</table>

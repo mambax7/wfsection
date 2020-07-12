@@ -1,0 +1,20 @@
+<{$block.message}><br /><br />
+<{if $block.story_title != ""}>
+<table width="99%" border="0" cellspacing="0" cellpadding="2"> 
+  <tr> 
+    <td width="100%"> 
+	<{if $block.image}> 
+      <img src="<{$block.image}>" align="left" hspace= "5" vspace= "0"  alt="" style="border: 1px solid black"> 
+	<{/if}><{$block.lang_title}>: <{$block.story_title}> 	
+	</td> 
+  </tr> 
+ <{if $block.story_summary}>
+  <tr> 
+	<td><{$block.lang_summary}>:<br /><{$block.story_summary}></td>	
+  </tr> 
+ <{/if}>
+  <tr> 
+	<td align="right"><br /><{$block.readmore}></td>	
+  </tr> 
+</table>
+<{/if}>

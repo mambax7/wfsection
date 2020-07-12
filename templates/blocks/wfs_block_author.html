@@ -1,0 +1,48 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr id="rightcolumn">
+	<td width="100%">
+<div class="blockContent">
+	<div><b><{$block.lang_author}></b> <{$block.author}></div> 
+</div>
+      <div class="blockContent"> 
+        <div align="left"><img src="<{$block.pic}>" align="left" vspace="2" hspace="2" >
+          <{$block.info}> </div>
+      </div><br />
+<div class="blockTitle" align = "left"><b><{$block.lang_stats}></b></div>
+<div class="blockContent"><{$block.lang_rating}> <{$block.rating}></br>
+<{$block.lang_artwritten}> <{$block.artnum}></div>
+
+<br />
+<div class="blockTitle" ><b><{$block.lang_contact}></b></div>
+<div class="blockContent"> 
+	<li><{$block.email}></li>
+	<li><{$block.pm}></li>
+</div>
+
+<br />
+<div class="blockTitle" align = "left"><b><{$block.lang_Arelated}></b></div>
+<div class="blockContent">
+	<li><a href="topten.php?auth=<{$block.uid}>"><{$block.lang_viewallarts}></a></li>
+  <{foreach item=mod from=$block.Arelated}>
+	<li><a href="<{$xoops_url}>/search.php?action=showallbyuser&mid=<{$mod.mid}>&uid=<{$block.uid}>"><{$block.lang_viewmod}> <{$mod.name}></a></li>
+  <{/foreach}>
+</div>
+<br />
+<div class="blockTitle" align = "left"><b><{$block.lang_authlatest}></b></div>
+<div class="blockContent">
+  <{foreach item=wfs from=$block.new}>
+    <li><{$wfs.title}> (<{$wfs.new}>)</li>
+  <{/foreach}>
+</div>
+<{if $block.related != "" }>
+<br />
+<div class="blockTitle" align = "left"><b><{$block.lang_relatedarts}></b></div>
+<div class="blockContent">
+  <{foreach item=related from=$block.related}>
+	<li><{$related.title}> (<{$related.new}>)</li>
+  <{/foreach}>
+</div>
+<{/if}>
+	    </td>
+	</tr>
+</table>

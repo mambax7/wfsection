@@ -1,0 +1,47 @@
+<div align = 'center'><{$catarray.imageheader}></div><br />
+<div align = 'center'><h3><{$catarray.indexheading}></h3></div>
+<div align = '<{$catarray.indexheaderalign}>'><{$catarray.indexheader}></div><br />
+
+<div align = '<{$catarray.indexheaderalign}>'><{$lang_listings}></div><br />
+<!-- Start ranking loop -->
+<{foreach item=ranking from=$rankings}>
+<table border = "0" cellpadding = "2" cellspacing = "1" class = "outer">
+  <tr>
+    <th colspan="6" align="center">
+      <div align="left"><{$ranking.title}> (<{$lang_sortby}>)</div>
+    </th>
+  </tr>
+  <tr>
+    <td width='7%' class="head"><b><{$lang_rank}></b></td>
+    <td width='28%' class="head"><{$lang_title}></td>
+    <td width='40%' class="head"><{$lang_category}></td>
+    <td width='8%' class="head" align='center'><{$lang_hits}></td>
+    <td width='9%' class="head" align='center'><{$lang_rating}></td>
+    <td width='8%' class="head" align='right'>
+      <div align="center"><{$lang_vote}></div>
+    </td>
+  </tr>
+
+  <!-- Start files loop -->
+  <{foreach item=file from=$ranking.file}>
+
+  <tr>
+    <td class="even">
+      <div align="center"><{$file.rank}></div>
+    </td>
+    <td class="odd"><{$file.title}></td>
+    <td class="even"><{$file.category}></td>
+    <td class="odd" align='center'><{$file.hits}></td>
+    <td class="even" align='center'><{$file.rating}></td>
+    <td class="odd" align='right'>
+      <div align="center"><{$file.votes}></div>
+    </td>
+  </tr>
+
+  <{/foreach}>
+  <!-- End links loop-->
+</table>
+<br />
+<{/foreach}>
+<!-- End ranking loop -->
+<br /><div align='<{$catarray.indexfooteralign}>'><{$catarray.indexfooter}></div>

@@ -1,0 +1,44 @@
+<{section name=i start=0 loop=$block}>
+    <{if $smarty.section.i.index == 0}>
+        <div align="right"><img src="<{$xoops_url}>/modules/wfsection/images/spacer.gif" alt="" height="5" width="1" border="0">
+        <table width="99%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="<{$xoops_url}>/modules/wfsection/images/articles_title.gif" alt="" height="16" width="109" border="0"></td>
+				<td><br></td>
+				<td align="right"><a href="modules/wfsection/"><img src="<{$xoops_url}>/modules/wfsection/images/more.gif" alt="" height="16" width="49" border="0"></a></td>
+			</tr>
+		</table><img src="<{$xoops_url}>/modules/wfsection/images/spacer.gif" alt="" height="5" width="5" border="0"><table width="99%" border="0" cellspacing="0" cellpadding="3">
+		
+			<tr>
+				<td width="102" valign="middle"><IMG SRC="<{ $block[i].image}>" style="border: solid 1px black"></td>
+				<td width="100%" style="padding: 3px" valign="top">
+				    <div class="smTitle"><{$block[i].title}></div><br>
+				    <{$block[i].summary}><br>
+				    <div align="right"><{$block[i].more}></div>
+				</td>
+				<td>
+	<{elseif $smarty.section.i.index == 1}>
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td class="blackbg" rowspan="3" style="padding: 3px"><IMG SRC="<{ $block[i].image}>" style="border: solid 1px white"></td>
+							<td colspan="2"><a href="modules/wfsection/"><img src="<{$xoops_url}>/modules/wfsection/images/other_articles.gif" alt="" height="19" width="206" border="0"></a></td>
+							<td rowspan="3"><img src="<{$xoops_url}>/modules/wfsection/images/blocks/oa_left.gif" alt="" height="138" width="2" border="0"></td>
+						</tr>
+						<tr>
+							<td style="padding: 10px 10px 10px 10px" valign="top">
+	<{/if}>
+	<{if $smarty.section.i.index != 0}>
+									<li><a href="(EmptyReference!)"><{ $block[i].title}></a>
+	<{/if}>
+<{/section}>
+							</td>
+							<td width="1"><img src="<{$xoops_imageurl}>/images/spacer.gif" alt="" height="110" width="1" border="0"></td>
+						</tr>
+						<tr>
+							<td colspan="2"><img src="<{$xoops_imageurl}>/images/blocks/oa_bottom.gif" alt="" height="2" width="206" border="0"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		</div>
